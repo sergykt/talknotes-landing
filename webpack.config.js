@@ -70,21 +70,6 @@ module.exports = (env, argv) => {
           },
         },
         {
-          test: /\.html$/i,
-          loader: "html-loader",
-          options: {
-            sources: {
-              list: [
-                {
-                  tag: "img",
-                  attribute: "data-src",
-                  type: "src",
-                },
-              ],
-            },
-          },
-        },
-        {
           test: /\.(woff|woff2|eot|ttf|otf)$/i,
           type: "asset/resource",
           generator: {
