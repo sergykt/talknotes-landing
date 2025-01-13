@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack --mode=development",
     "build": "webpack --mode=production",
-    "watch": "webpack --mode=development -watch",
+    "watch": "webpack --mode=development --watch",
     "start": "webpack serve --mode=development",
     "lint": "eslint . --report-unused-disable-directives",
     "lint:fix": "eslint . --fix",
@@ -37,6 +37,7 @@
     "postcss-loader": "^8.1.1",
     "postcss-preset-env": "^10.1.3",
     "prettier": "3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
     "sass": "^1.83.1",
     "sass-loader": "^16.0.4",
     "sharp": "^0.33.5",

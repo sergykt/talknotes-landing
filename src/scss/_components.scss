@@ -1,0 +1,9 @@
+@layer components {
+  button {
+    @apply whitespace-nowrap rounded-md bg-indigo-600 px-4 py-2 text-base font-medium text-white transition-all duration-200;
+  }
+
+  .btn-1 {
+    @apply bg-indigo-50 font-semibold text-indigo-700 hover:bg-indigo-100;
+  }
+}
