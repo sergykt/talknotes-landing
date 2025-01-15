@@ -1,6 +1,6 @@
 <section>
-  <div class="my-container pt-[5vh]">
-    <div class="mx-auto flex max-w-[960px] items-center justify-between gap-4">
+  <div class="my-container pb-[7vw] pt-[5vh]">
+    <div class="mx-auto mb-12 flex max-w-[960px] items-center justify-between gap-4">
       <div class="flex min-w-0 max-w-[480px] flex-col items-center">
         <img
           class="mb-4 opacity-70"
@@ -245,10 +245,152 @@
         </div>
       </div>
       <div
-        class="relative flex h-[525px] w-[400px] min-w-0 flex-col items-center rounded-xl bg-white p-8 shadow-md before:pointer-events-none before:absolute before:inset-0 before:animate-pulse before:rounded-xl before:border-2 before:border-indigo-200"
+        id="demo"
+        class="relative flex w-[400px] min-w-0 flex-col items-center rounded-xl bg-white p-8 pb-2 shadow-md before:pointer-events-none before:absolute before:inset-0 before:animate-pulse before:rounded-xl before:border-2 before:border-indigo-200"
       >
         <h3 class="mb-4 text-xl font-medium text-gray-700">Interactive demo</h3>
+        <canvas
+          class="mb-8 max-w-[250px] rounded-xl bg-indigo-50"
+          width="800"
+          height="300"
+        ></canvas>
+        <div class="mb-8 text-center">
+          <div class="mb-1 text-xs font-medium text-gray-400">Limit: 01:00</div>
+          <div class="text-3xl font-semibold">00:00</div>
+        </div>
+        <div class="mb-[3.75rem] flex items-center gap-6">
+          <button class="btn-3 rounded-full p-4" type="button" disabled aria-label="play">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              role="img"
+              class="icon"
+              width="1.5rem"
+              height="1.5rem"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill="currentColor"
+                d="M6.3 2.84A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.27l9.344-5.891a1.5 1.5 0 0 0 0-2.538z"
+              ></path>
+            </svg>
+          </button>
+          <button
+            class="btn-1 animate-pulse-beat rounded-full p-6"
+            type="button"
+            aria-label="record"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              role="img"
+              class="icon"
+              width="3rem"
+              height="3rem"
+              viewBox="0 0 20 20"
+            >
+              <g fill="currentColor">
+                <path d="M7 4a3 3 0 0 1 6 0v6a3 3 0 1 1-6 0z"></path>
+                <path
+                  d="M5.5 9.643a.75.75 0 0 0-1.5 0V10c0 3.06 2.29 5.585 5.25 5.954V17.5h-1.5a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5h-1.5v-1.546A6 6 0 0 0 16 10v-.357a.75.75 0 0 0-1.5 0V10a4.5 4.5 0 0 1-9 0z"
+                ></path>
+              </g>
+            </svg>
+          </button>
+          <button class="btn-3 rounded-full p-4" type="button" disabled aria-label="remove">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              role="img"
+              class="icon"
+              width="1.5rem"
+              height="1.5rem"
+              viewBox="0 0 16 16"
+              data-v-e8d572f6=""
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M5 3.25V4H2.75a.75.75 0 0 0 0 1.5h.3l.815 8.15A1.5 1.5 0 0 0 5.357 15h5.286a1.5 1.5 0 0 0 1.492-1.35l.815-8.15h.3a.75.75 0 0 0 0-1.5H11v-.75A2.25 2.25 0 0 0 8.75 1h-1.5A2.25 2.25 0 0 0 5 3.25m2.25-.75a.75.75 0 0 0-.75.75V4h3v-.75a.75.75 0 0 0-.75-.75zM6.05 6a.75.75 0 0 1 .787.713l.275 5.5a.75.75 0 0 1-1.498.075l-.275-5.5A.75.75 0 0 1 6.05 6m3.9 0a.75.75 0 0 1 .712.787l-.275 5.5a.75.75 0 0 1-1.498-.075l.275-5.5a.75.75 0 0 1 .786-.711"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <button class="mb-2 px-8" type="button" disabled>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-hidden="true"
+            role="img"
+            class="icon"
+            style="vertical-align: -0.125em"
+            width="1em"
+            height="1em"
+            viewBox="0 0 16 16"
+            data-v-e8d572f6=""
+          >
+            <path
+              fill="currentColor"
+              fill-rule="evenodd"
+              d="M2 8a.75.75 0 0 1 .75-.75h8.69L8.22 4.03a.75.75 0 0 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 0 1-1.06-1.06l3.22-3.22H2.75A.75.75 0 0 1 2 8"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          Continue
+        </button>
+        <p class="text-sm font-medium text-gray-400">
+          <span class="inline-block animate-bounce">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              role="img"
+              class="icon"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              data-v-e8d572f6=""
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M8 14a.75.75 0 0 1-.75-.75V4.56L4.03 7.78a.75.75 0 0 1-1.06-1.06l4.5-4.5a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1-1.06 1.06L8.75 4.56v8.69A.75.75 0 0 1 8 14"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </span>
+          Try it out! Click the
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-hidden="true"
+            role="img"
+            class="icon animate-pulse text-indigo-600"
+            style=""
+            width="1em"
+            height="1em"
+            viewBox="0 0 16 16"
+            data-v-e8d572f6=""
+          >
+            <path fill="currentColor" d="M8 1a2 2 0 0 0-2 2v4a2 2 0 1 0 4 0V3a2 2 0 0 0-2-2"></path>
+            <path
+              fill="currentColor"
+              d="M4.5 7A.75.75 0 0 0 3 7a5 5 0 0 0 4.25 4.944V13.5h-1.5a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5h-1.5v-1.556A5 5 0 0 0 13 7a.75.75 0 0 0-1.5 0a3.5 3.5 0 1 1-7 0"
+            ></path>
+          </svg>
+          to start recording
+        </p>
       </div>
+    </div>
+    <div class="flex flex-wrap items-center justify-center gap-4 opacity-70">
+      <img src="../assets/svg/sp-medium.svg" width="200" height="50" alt="Medium Logo" />
+      <img src="../assets/svg/sp-ih.svg" width="200" height="50" alt="Indie Hackers Logo" />
+      <img src="../assets/svg/sp-foundr.svg" width="150" height="50" alt="Foundr Logo" />
+      <img src="../assets/svg/sp-scoopit.svg" width="150" height="50" alt="Scoop.it! Logo" />
     </div>
   </div>
 </section>
