@@ -56,10 +56,17 @@ module.exports = (env, argv) => {
           ],
         },
         {
-          test: /\.(jpe?g|png|gif|svg)$/i,
+          test: /\.(jpe?g|png|gif|svg|webp)$/i,
           type: "asset/resource",
           generator: {
             filename: "img/[name][ext]",
+          },
+        },
+        {
+          test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)$/i,
+          type: "asset/resource",
+          generator: {
+            filename: "media/[name][ext]",
           },
         },
         {
